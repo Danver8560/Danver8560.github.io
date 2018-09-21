@@ -2,22 +2,23 @@
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: large;
 	font-weight: bold;
-	background-color: #13CD35;
-	border-radius: 75%;
-	border-style: 75%;
+	background-color: #CF0E0E;
+	border-radius: 75px;
+	border-style: 75px;
 	padding: 10px;
 	text-align: center;
 	opacity: 1;
 }
 .buttonStyle {
-	border-radius: 50%;
+	border-radius: 75px;
 	border: thin solid #E40B0B;
 	padding: 5px;
 	background-color: #F8F094;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	color: #663300;
-	width: 75px;
+	height: 50px;
+	width: 750px;
 }
 
 .buttonStyle:hover {
@@ -33,6 +34,8 @@
 	cursor: pointer;
 }
 .img {
-    border-radius: 50%;
+	position: absolute;
+	border: 10px solid red;
+    
     
 }
