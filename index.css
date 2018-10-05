@@ -33,9 +33,13 @@
 	color: #669900;
 	cursor: pointer;
 }
+table, th, tr{
+	border: 3px solid black;
+	text-align: center;
+}
+th, td{
+	padding: 10px;
+}
 .img {
-	position: absolute;
-	border: 10px solid red;
-    
-    
+	position: static;
 }
