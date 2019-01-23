@@ -1,0 +1,277 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+
+    body{
+      overflow: hidden;
+    }
+
+    #container{
+        position: absolute;
+        top: 58px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: black;
+        
+    }
+    #leftpane{
+        width: 56%;
+        height: 100%;
+        /*background: red;*/
+        float: left;
+    }
+    #rightpane{
+        width: 44%;
+        height: 100%;
+        /*background: yellow;*/
+        float: left;
+    }
+    #buttons{
+        position: absolute;
+        bottom: 50px;
+        left: 56%;
+        right: 0px;
+        height: 50px;
+        /*background: lime;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+      margin: 40px;
+    }
+    #storytext{
+        position: absolute;
+        left: 56%;
+        right: 0px;
+        top: 0px;
+        bottom: 50px;
+        /*background: blue;*/
+    }
+    #graphic{
+      max-height: 100%;
+      max-width: 100%;
+      width: 100%;
+      
+    }
+    #text{
+      color: white;
+      font-size: 50px;
+    }
+
+</style>
+</head>
+
+<body>
+  <table style="width:100%">
+    <tr>
+      <th><h1>Daniel Verdugo</h1></th>
+      <th>
+      <ul class="nav nav-pills justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="aboutme.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="resume.html">Resume</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="project.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projects
+          </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"> Code Blocks App </a>
+              <a class="dropdown-item" href="#"> Python Story </a>
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact Me</a>
+        </li>
+      </ul>
+      </th>
+    </tr>
+    </table>
+  
+    <div id="container">
+        <div id="leftpane">
+          <img id="graphic" src="house.jpg" />
+          
+        </div>
+      
+        <div id="rightpane">
+            <div id="storytext">
+              <p id="text"> This is where the story goes </p>
+            </div>
+            <div id="buttons">
+                <button id="button1" onclick="buttonclick(1)" type="button" class="btn btn-warning">Choice 1</button>
+                <button id="button2" onclick="buttonclick(2)" type="button" class="btn btn-warning">Choice 2</button>
+                <button id="button3" onclick="buttonclick(3)" type="button" class="btn btn-warning">Choice 3</button>
+                <button id="button4" onclick="buttonclick(4)" type="button" class="btn btn-warning">Choice 4</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+  var graphic = document.getElementById("graphic")
+  var text = document.getElementById("text")
+  var button1 = document.getElementById("button1")
+  var button2 = document.getElementById("button2")
+  var button3 = document.getElementById("button3")
+  var button4 = document.getElementById("button4")
+  var state = "intro"
+  
+  /* Sample Function 
+  function ****(){
+    text.innerHTML = "  "
+    button1.innerHTML = "  "
+    button1.style.display = "block"
+    button2.innerHTML = "  "
+    button2.style.display = "block"
+    button3.innerHTML = "  "
+    button3.style.display = "block"
+    button4.innerHTML = "  "
+    button4.style.display = "block"
+    graphic.src = " "
+  }
+  
+  */
+ 
+ 
+  /* Story States*/
+  
+  function intro(){
+    text.innerHTML = "Found Deep in the Underground, Snas is sitting at home, busy watching MTT Game Show, when the TV cuts out. Does he attempt to fix the TV? "
+    button1.innerHTML = "FIX"
+    button1.style.display = "block"
+    button2.innerHTML = "SIT"
+    button2.style.display = "block"
+    button3.style.display = "none"
+    button4.style.display = "none"
+    graphic.src = "house.jpg"
+  }
+  
+  function FixTV(){
+    text.innerHTML = "He begins flipping through channels. He finds that all channels are cut out. With no success, Snas gets aggravated, and stands up, thinking it may be the antenna. Should he check the Antenna?"
+    button1.innerHTML = "CHECK"
+    button1.style.display = "block"
+    button2.innerHTML = "WAIT"
+    button2.style.display = "block"
+    button3.innerHTML = "Blank"
+    button3.style.display = "none"
+    button4.innerHTML = "Blank"
+    button4.style.display = "none"
+    graphic.src = " "
+  }
+  
+  function Antenna(){
+    text.innerHTML = "Snas goes outside and checks the antenna. Snas checks the antenna, and it would seem that it is all fine. What should he do with it?  "
+    button1.innerHTML = "FIX"
+    button1.style.display = "block"
+    button2.innerHTML = "PUNCH"
+    button2.style.display = "block"
+    button3.innerHTML = "  "
+    button3.style.display = "block"
+    button4.innerHTML = "  "
+    button4.style.display = "block"
+    graphic.src = " "
+  }
+  
+  function CoopOrSolo(){
+    text.innerHTML = "  "
+    button1.innerHTML = "  "
+    button1.style.display = "block"
+    button2.innerHTML = "  "
+    button2.style.display = "block"
+    button3.innerHTML = "  "
+    button3.style.display = "block"
+    button4.innerHTML = "  "
+    button4.style.display = "block"
+    graphic.src = " "
+  }
+  
+  function Grillbys(){
+    text.innerHTML = "  "
+    button1.innerHTML = "  "
+    button1.style.display = "block"
+    button2.innerHTML = "  "
+    button2.style.display = "block"
+    button3.innerHTML = "  "
+    button3.style.display = "block"
+    button4.innerHTML = "  "
+    button4.style.display = "block"
+    graphic.src = " "
+  }
+  
+  function ****(){
+    text.innerHTML = "  "
+    button1.innerHTML = "  "
+    button1.style.display = "block"
+    button2.innerHTML = "  "
+    button2.style.display = "block"
+    button3.innerHTML = "  "
+    button3.style.display = "block"
+    button4.innerHTML = "  "
+    button4.style.display = "block"
+    graphic.src = " "
+  }
+  
+  /*Ending States*/ 
+  function BoredEnding(){
+    text.innerHTML = "Snas decides he will sit and wait until the TV comes back on. He sits there so long he dies of boredom. -Bored Ending- "
+    button1.innerHTML = "RESTART"
+    button1.style.display = "block"
+    button2.innerHTML = "Blank"
+    button2.style.display = "none"
+    button3.innerHTML = "Blank"
+    button3.style.display = "none"
+    button4.innerHTML = "Blank"
+    button4.style.display = "none"
+    graphic.src = ""
+  }
+  
+  /*Button Functions*/
+  
+  function buttonclick(button){
+    if (state == "intro"){
+      if (button == 1){
+        state = "FIX"
+        FixTV()
+      }
+      else if (button == 2){
+        state = "SIT"
+        BoredEnding()
+      }
+    }
+    
+    if (state == "FixTV"){
+      if (button ==1){
+        state = "CHECK"
+        Antenna()
+      }
+      else if (button ==2){
+        state = "WAIT"
+        BoredEnding()
+      }
+    }
+    
+    if (state == "BoredEnding"){
+      if (button == 1){
+        state = "RESTART"
+        intro()
+        
+      }
+    }
+  }
+  
+  intro()
+
+</script>
+</body>
+</html>

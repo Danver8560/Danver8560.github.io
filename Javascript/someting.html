@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title> Daniel Verdugo </title>
+
+</head>
+
+<body>
+    
+    <button type='button' onclick="clkme()" > Click Me </button>
+    <p id="ptext">This is about to change<p>
+        
+    <button type='button' onclick="adder()" > Click to Add </button>
+    
+    <button type='button' onclick="multiply()"> Click to Multiply </button>
+    
+    <p id='name'> My Name will go here</p>
+    
+    <p id='cat'> This sentence will change. </p>
+    
+    <img src='https://media.giphy.com/media/mIoxSMYcBwyYw/giphy.gif'/>
+    <img src='https://66.media.tumblr.com/c30e2340143b8d55c5721a4663bd51ce/tumblr_op6oerXxxz1urtbf3o1_400.gif'/>
+    <img src='https://media.giphy.com/media/KSWmL7uSl4qOc/giphy.gif'/>
+    <br>
+    
+    <img id="dong" src='dong.jpg' width='1200' height='800px'>
+    
+    <button id='dongbutton'type='button' onclick=picChange()> Bold Dong </button>
+    
+<script>
+
+    var state = "dong"
+    
+     function picChange(){
+        if (state == "dong"){
+            var pic = document.getElementById("dong")
+            pic.src = 'sweetdong.jpg'
+            var dongbutton = document.getElementById('dongbutton')
+            dongbutton.innerHTML = 'Our Dong'
+            state = "dong2"
+        }
+        else if (state == "dong2"){
+            var pic = document.getElementById("dong")
+            pic.src = 'posedong.jpg'
+            var dongbutton = document.getElementById('dongbutton')
+            dongbutton.innerHTML = 'Super Dong'
+            state = "dong3"
+        }
+        else if (state == "dong3"){
+            var pic = document.getElementById("dong")
+            pic.src = 'ourdong.jpg'
+            var dongbutton = document.getElementById('dongbutton')
+            dongbutton.innerHTML = 'Bold Dong'
+            state = "dong4"
+        }
+        else if (state =="dong4"){
+            var pic = document.getElementById("dong")
+            pic.src = 'bolddong.jpg'
+            var dongbutton = document.getElementById('dongbutton')
+            dongbutton.innerHTML = 'Sweet Dong'
+            state = "dong"
+        }
+    }
+    
+    function clkme(){
+        var ptext = document.getElementById('ptext')
+        ptext.innerHTML = 'COOL'
+        ptext.style.fontSize = '35px'
+        ptext.style.color = 'red'
+        
+    }
+    function adder(){
+        var x = 3
+        var y = 4
+        var z = x + y
+        var ptext = document.getElementById('ptext')
+        ptext.innerHTML = z
+        alert('BRUH: ' + z)
+    }
+    
+    function multiply(){
+        var x = 12
+        var y = 5
+        var z = x * y
+        var ptext = document.getElementById('ptext')
+            ptext.innerHTML = z
+            ptext.style.fontSize = '60px'
+            ptext.style.color = 'red'
+    }
+    
+    var word = 'Daniel' + ' ' + 'Verdugo'
+    document.getElementById('name').innerHTML = word 
+    
+    var word = 'This' + ' ' + 'Is' + ' ' + 'A' + ' ' + 'Sentence'
+    document.getElementById('cat').innerHTML = word
+    document.getElementById('cat').style.color = 'plum'
+    document.getElementById('cat').style.fontSize = '200px'
+    
+   
+    
+    var w = 6
+    
+    if (w > 6){
+        document.getElementById('name').innerHTML = "Hello"
+    }
+    else{
+        document.getElementById('name').innerHTML = "Goodbye"
+    }
+    
+    
+</script>
+</body>
+</html>
